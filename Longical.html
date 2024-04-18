@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Longitud de Onda</title>
+    <link href="css/CSSCALULADORAACUS.css" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Calcular Ecuacion general en una onda armonica en una dimensión</h1>
+
+
+    <form id="ondaForm">
+        <label for="amplitudd">Amplitud (A):</label>
+        <input type="number" id="amplitudd" placeholder="Ingrese la amplitud" required>
+
+        <label for="frecuenciaaaa">Frecuencia (f):</label>
+        <input type="number" id="frecuenciaaaa" placeholder="Ingrese la frecuencia1" required>
+
+        <label for="numeroOndaaa">Número de Onda (k):</label>
+        <input type="number" id="numeroOndaaa" placeholder="Ingrese el número de onda" required>
+
+        <label for="faseIniciaaal">Fase Inicial (φ):</label>
+        <input type="number" id="faseIniciaaal" placeholder="Ingrese la fase inicial" required>
+
+        <button type="button" onclick="calcularEcuacionOnda()">Calcular Ecuación</button>
+    </form>
+
+    <p id="ecuacionResultado"></p>
+
+
+    <h1></h1>
+    <h2>Frecuencia de una onda</h2>
+
+    <form id="calculadoraForm">
+        <label for="velonda">Velocidad de la onda:</label>
+        <input type="number" id="velonda" placeholder="Ingrese la velocidad" required>
+        <label for="longonda">Longitud de onda:</label>
+        <input type="number" id="longonda" placeholder="Ingrese la longitud" required>
+        <button type="button" onclick="Calcularfrecuenciadeonda()">Calcular</button>
+        <p id="resultadofrecuenciaa"></p>
+    </form>
+    <h2>Velocidad de una onda</h2>
+    <form id="calculadoraForm">
+        <label for="longonda2">numero de onda:</label>
+        <input type="number" id="longonda2" placeholder="Ingrese" required>
+        <label for="frelonda2">Frecuencia de la angular:</label>
+        <input type="number" id="frelonda2" placeholder="Ingrese " required>
+        <button type="button" onclick="Calcularvelocidad()">Calcular</button>
+        <p id="resultadovelocidadonda"></p>
+    </form>
+    <h2>Longitud de la onda</h2>
+    <form id="calculadoraForm">
+        <label for="veloonda2">Velocidad de la onda:</label>
+        <input type="number" id="veloonda2" placeholder="Ingrese la velocidad" required>
+        <label for="frelonda3">Frecuencia de la onda:</label>
+        <input type="number" id="frelonda3" placeholder="Ingrese la frecuencia" required>
+        <button type="button" onclick="Calcularlongitud()">Calcular</button>
+        <p id="resultadolongonda"></p>
+    </form>
+    <form id="calculadoraForm">
+
+        <label for="frecuencia">Frecuencia (Hz):</label>
+        <input type="number" id="frecuencia" placeholder="Ingrese la frecuencia" required>
+
+        <button type="button" onclick="calcularLongitudDeOnda()">Calcular</button>
+
+        <label for="periodo">Periodo (Hz):</label>
+        <input type="number" id="periodo" placeholder="Ingrese el periodo" required>
+        <button type="button" onclick="calcularfrecuencia()">Calcular</button>
+
+        <label for="frangular">Frecuencia angular:</label>
+        <input type="number" id="frangular" placeholder="Ingrese la frecuencia angular" required>
+        <button type="button" onclick="calcularfrangular()">Calcular</button>
+        <label for="numonda">Numero de Onda:</label>
+        <input type="number" id="numonda" placeholder="Ingrese la Amplitud de la onda" required>
+        <button type="button" onclick="calcularnumonda()">Calcular</button>
+
+        
+    </form>
+
+    <div class="result-container">
+        <p id="resultadofrecuenciaa"></p>
+        <p id="resultado"></p>
+        <p id="resultadofr"></p>
+        <p id="resultadofra"></p>
+        <p id="resultadonumondas"></p>
+    </div>
+    <h2>Amplitud de las ondas</h2>
+    <form id="calculadoraForm">
+        <label for="ampli04">Amplitud (A):</label>
+        <input type="number" id="ampli04" placeholder="Ingrese la amplitud" required>
+        <label for="veloanguw">Velocidad angular(w):</label>
+        <input type="number" id="veloanguw" placeholder="Ingrese la velocidad angular" required>
+        <button type="button" onclick="calcularamplituddeonda()">Calcular</button>
+        <p id="resulamplondas"></p>
+    </form>
+    <h2>Frecuencia Angular</h2>
+    <form id="calculadoraForm">
+        <label for="frecuencia4">frecuencia (f):</label>
+        <input type="number" id="frecuencia4" placeholder="Ingrese la velocidad" required>
+       
+        <button type="button" onclick="Calcularfreangulaar()">Calcular</button>
+        <p id="resulfrecuonda"></p>
+    </form>
+    <h2>Frecuencia Angular radianes num osi</h2>
+    <form id="calculadoraForm">
+        <label for="frecuencia44">Num os:</label>
+        <input type="number" id="frecuencia44" placeholder="Ingrese la velocidad" required>
+        <label for="timepp4">Tiempo:</label>
+        <input type="number" id="timepp4" placeholder="Ingrese la velocidad" required>
+        <button type="button" onclick="Calcularfreangulaaar()">Calcular</button>
+        <p id="resulfrecuondaaa2"></p>
+    </form>
+    <h2>Frecuencia</h2>
+    <form id="calculadoraForm">
+        <label for="frecuenciaw">frecuencia angular(w):</label>
+        <input type="number" id="frecuenciaw" placeholder="Ingrese la frecuencia angular" required>
+       
+        <button type="button" onclick="Calcularfrecuw()">Calcular</button>
+        <p id="resulfrecuw"></p>
+    </form>
+    <h2>Numero de onda</h2>
+    <form id="calculadoraForm">
+        <label for="longonda333">Longitud de onda:</label>
+        <input type="number" id="longonda333" placeholder="Ingrese la longitud" required>
+       
+        <button type="button" onclick="Calcularnumonda()">Calcular</button>
+        <p id="resulnumonda"></p>
+    </form>
+    <h2>Indice de refracción</h2>
+    <form id="calculadoraForm">
+        <label for="velovacion">Velocidad de la luz en un vacion:</label>
+        <input type="number" id="velovacion" placeholder="Ingrese la velocidad de un vacio" required>
+        <label for="velomedio">Velocidad de la luz en medio:</label>
+        <input type="number" id="velomedio" placeholder="Ingrese la velocidad de la luz en un medio" required>
+        <button type="button" onclick="calcularindicerefr()">Calcular</button>
+        <p id="resultindicer"></p>
+    </form>
+    <h2>Velocidad de la luz en un vacio</h2>
+    <form id="calculadoraForm">
+        <label for="indirefra">indice de refracción</label>
+        <input type="number" id="indirefra" placeholder="Ingrese el indice de refracción" required>
+        <label for="velomedio2">Velocidad de la luz en medio:</label>
+        <input type="number" id="velomedio2" placeholder="Ingrese la velocidad de la luz en un medio" required>
+        <button type="button" onclick="calcularvelocidadvacion()">Calcular</button>
+        <p id="resultvelovacio"></p>
+    </form>
+    <h2>Velocidad en el agua</h2>
+    <form id="calculadoraForm">
+        <label for="compresiniagua">modulo volumetrico</label>
+        <input type="number" id="compresiniagua" placeholder="Ingrese k" required>
+        <label for="densidadagua">densidad del agua p:</label>
+        <input type="number" id="densidadagua" placeholder="Ingrese p" required>
+        <button type="button" onclick="calcularcompresibilidad()">Calcular</button>
+        <p id="resulcompre"></p>
+    </form>
+
+
+    <h2>Velocidad de la luz en un medio</h2>
+    <form id="calculadoraForm">
+        <label for="velovacio4">Velocidad de la luz en un vacio</label>
+        <input type="number" id="velovacio4" placeholder="Ingrese la velocidad de vacio" required>
+        <label for="indicederefra4">Indice de refracción:</label>
+        <input type="number" id="indicederefra4" placeholder="Ingrese el indice de refraccion" required>
+        <button type="button" onclick="calcularlaluzenunmedio()">Calcular</button>
+        <p id="resultvelomedio"></p>
+    </form>
+
+
+
+
+
+    <h2>Coeficiente de absorción</h2>
+    <form id="calculadoraForm">
+        <label for="eneabs">Energia absorbida (w)</label>
+        <input type="number" id="eneabs" placeholder="Ingrese la energia (w)" required>
+        <label for="inteinci">Intensidad del insidente (I):</label>
+        <input type="number" id="inteinci" placeholder="Ingrese la intensidad (I)" required>
+        <button type="button" onclick="calcularvelocidadvacion()">Calcular</button>
+        <p id="resultvelovacio"></p>
+    </form>
+    <h2>Intensidad de insidente</h2>
+    <form id="calculadoraForm">
+        <label for="velovacion">Velocidad de la luz en un vacion:</label>
+        <input type="number" id="velovacion" placeholder="Ingrese la velocidad de un vacio" required>
+        <label for="velomedio">Velocidad de la luz en medio:</label>
+        <input type="number" id="velomedio" placeholder="Ingrese la velocidad de la luz en un medio" required>
+        <button type="button" onclick="calcularindicerefr()">Calcular</button>
+        <p id="resultindicer"></p>
+    </form>
+    <h2>Energia absorbida</h2>
+    <form id="calculadoraForm">
+        <label for="velovacio4">Velocidad de la luz en un vacio</label>
+        <input type="number" id="velovacio4" placeholder="Ingrese la velocidad de vacio" required>
+        <label for="indicederefra4">Indice de refracción:</label>
+        <input type="number" id="indicederefra4" placeholder="Ingrese el indice de refraccion" required>
+        <button type="button" onclick="calcularlaluzenunmedio()">Calcular</button>
+        <p id="resultvelomedio"></p>
+    </form>
+
+    <h2>Intensidad de una Onda</h2>
+    <form id="calculadoraForm">
+        <label for="ampli22">Amplitud(A)</label>
+        <input type="number" id="ampli22" placeholder="Ingrese la amplitud (w)" required>
+        <label for="frecuangular22">Frecuencia Angular(w)</label>
+        <input type="number" id="frecuangular22" placeholder="Ingrese frecuencia angular (w)" required>
+        <label for="densilineal2">Densidad lineal(p)</label>
+        <input type="number" id="densilineal2" placeholder="Ingrese la densidad (p)" required>
+        <label for="veloangular2">velocidad angular(v)</label>
+        <input type="number" id="veloangular2" placeholder="Ingrese la densidad (p)" required>
+        <button type="button" onclick="calcularlainteonda()">Calcular</button>
+        <p id="resultinteonda"></p>
+        <button type="button" href="Frontend.html"></button>
+    </form>
+
+
+
+
+
+
+    <script src="jscalculadoraacustica/general.js"></script>
+    <script src="jscalculadoraacustica/frecuenciavl.js"></script>
+    <script src="jscalculadoraacustica/velocidaddelaluz.js"></script>
+    <script src="jscalculadoraacustica/intenonda.js"></script>
+    
+
+
+
+</body>
+</html>

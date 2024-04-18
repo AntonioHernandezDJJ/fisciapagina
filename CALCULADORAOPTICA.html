@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Optica</title>
+    <link href="css/CSSCALULADORAACUS.css" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Intensidad de una Onda</h1>
+
+
+    <form id="ondaForm">
+        <label for="amplitudparaIDO">Amplitud (A):</label>
+        <input type="number" id="amplitudparaIDO" placeholder="Ingrese la amplitud" required>
+
+        <label for="densidadparaIDO">Densidad (p):</label>
+        <input type="number" id="densidadparaIDO" placeholder="Ingrese la densidad" required>
+
+        <label for="FrecuenciaangularIDO">Frecuencaia Angular(w):</label>
+        <input type="number" id="FrecuenciaangularIDO" placeholder="Ingrese w" required>
+
+        <label for="VelocidadIDO">Velocidad(v):</label>
+        <input type="number" id="VelocidadIDO" placeholder="Ingrese v" required>
+
+        <button type="button" onclick="calcularlaintesidadonda()">Calcular Ecuación</button>
+
+        <h5>Calcular velocidad de la onda</h5>
+        <form id="ondaForm">
+            <label for="frecuAnguVDO">Frecuencia Angular (w):</label>
+            <input type="number" id="frecuAnguVDO" placeholder="Ingrese la frecuencia angular" required>
+    
+            <label for="NOndaVDO">Ingrese numero de onda(k):</label>
+            <input type="number" id="NOndaVDO" placeholder="Ingrese k" required>
+            <button type="button" onclick="calcularvelocidadDO()">Calcular Ecuación</button>
+            <p id="reulveloonda"></p>
+        </form>
+    </form>
+
+    <p id="resultintensidaddelaonda"></p>
+
+
+
+
+    <h1>Longitud de onda</h1>
+
+
+    <form id="ondaForm">
+        <label for="velopropagacion">Velocidad de propagacion:</label>
+        <input type="number" id="velopropagacion" placeholder="Ingrese v" required>
+
+        <label for="frecuenciaVP">Frecuencia(f):</label>
+        <input type="number" id="frecuenciaVP" placeholder="Ingrese f" required>
+        <button type="button" onclick="calcularintensidalononda()">Calcular Ecuación</button>
+        <p id="resulvelocidaddepropag"></p>
+
+    </form>
+
+    <h1>Numero de onda</h1>
+
+
+    <form id="ondaForm">
+        <label for="longituddeondaNO">Longitud de onda:</label>
+        <input type="number" id="longituddeondaNO" placeholder="Ingrese " required>
+        <button type="button" onclick="calcularnumondaaa()">Calcular Ecuación</button>
+        <p id="calcularnumondaaa"></p>
+
+    </form>
+
+    <h1>Frecuencia</h1>
+
+
+    <form id="ondaForm">
+        <label for="velocidadFO">Velocidad:</label>
+        <input type="number" id="velocidadFO" placeholder="Ingrese v " required>
+        <label for="longFO">Longitud de onda:</label>
+        <input type="number" id="longFO" placeholder="Ingrese " required>
+        <button type="button" onclick="calcularfrecuencia()">Calcular Ecuación</button>
+        <p id="calcularfrec"></p>
+
+    </form>
+
+    <h1>Modulo del agua</h1>
+
+    <form id="ondaForm">
+        <label for="MVDELAGUA">Modulo volumetrico del agua o mercurio:</label>
+        <input type="number" id="MVDELAGUA" placeholder="Ingrese  " required>
+        <label for="densidadp">Densidad:</label>
+        <input type="number" id="densidadp" placeholder="Ingrese p " required>
+        <button type="button" onclick="calcularmodulvdelagua()">Calcular Ecuación</button>
+        <p id="calcularmvdelagua"></p>
+
+    </form>
+
+
+    <h1>Modulo de elasticida de un metal
+    </h1>
+
+    <form id="ondaForm">
+        <label for="MEEM">Modulo de elasticidad en un metal:</label>
+        <input type="number" id="MEEM" placeholder="Ingrese  " required>
+        <label for="DDM">Densidad del metal</label>
+        <input type="number" id="DDM" placeholder="Ingrese p " required>
+        <button type="button" onclick="calcularvelocidadsm()">Calcular Ecuación</button>
+        <p id="calcularvelocidadSM"></p>
+
+    </form>
+
+    <h1>Frecuencia Angular</h1>
+
+
+    <form id="ondaForm">
+        <label for="NUMOSC">Numero de oscilaciones:</label>
+        <input type="number" id="NUMOSC" placeholder="Ingrese " required>
+        <label for="time">Time:</label>
+        <input type="number" id="time" placeholder="Ingrese " required>
+        <button type="button" onclick="frecangular()">Calcular Ecuación</button>
+        <p id="calcularfrecangul"></p>
+
+    </form>
+
+
+    <h1>Tiempo de Propagación</h1>
+
+
+    <form id="ondaForm">
+        <label for="distanciaTP">Distancia:</label>
+        <input type="number" id="distanciaTP" placeholder="Ingrese " required>
+        <label for="velocidadTP">Velocidad:</label>
+        <input type="number" id="velocidadTP" placeholder="Ingrese " required>
+        <button type="button" onclick="calculartimepodepro()">Calcular Ecuación</button>
+        <p id="calculartimepodepropagacion"></p>
+
+    </form>
+
+    
+    <h1>Distancia de Propagación</h1>
+
+
+    <form id="ondaForm">
+        <label for="VeloDER">Velocidad:</label>
+        <input type="number" id="VeloDER" placeholder="Ingrese " required>
+        <label for="timeDER">Timepo:</label>
+        <input type="number" id="timeDER" placeholder="Ingrese " required>
+        <button type="button" onclick="calculardiser()">Calcular Ecuación</button>
+        <p id="calculardiserecptor"></p>
+
+    </form>
+
+    <h1></h1>
+    <h5>Tubo cerrado</h5>
+
+
+    <form id="ondaForm">
+        <label for="velotuboc">Velocidad:</label>
+        <input type="number" id="velotuboc" placeholder="Ingrese " required>
+        <label for="tonotbc">Tono armonico:</label>
+        <input type="number" id="tonotbc" placeholder="Ingrese " required>
+        <label for="longtbc">Longitud:</label>
+        <input type="number" id="longtbc" placeholder="Ingrese " required>
+        <button type="button" onclick="calculartubocerrado()">Calcular Ecuación</button>
+        <p id="calculartbresul"></p>
+
+    </form>
+    <h5>Tubo abierto</h5>
+
+
+    <form id="ondaForm">
+        <label for="velotuboc2">Velocidad:</label>
+        <input type="number" id="velotuboc2" placeholder="Ingrese " required>
+        <label for="tonotbc2">Tono armonico:</label>
+        <input type="number" id="tonotbc2" placeholder="Ingrese " required>
+        <label for="longtbc2">Longitud:</label>
+        <input type="number" id="longtbc2" placeholder="Ingrese " required>
+        <button type="button" onclick="calculartuboabierto()">Calcular Ecuación</button>
+        <p id="calculartbresulabierto"></p>
+
+    </form>
+
+    <a href="Longical.html" class="nav-item nav-link active">Calculadora chafa</a>
+    <a href="Frontend.html" class="nav-item nav-link active">Calculadora sin formato</a>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/JAVAFormulas1.js"></script>
+
+</body>
+</html>
